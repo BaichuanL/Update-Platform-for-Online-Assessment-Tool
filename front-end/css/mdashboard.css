@@ -1,0 +1,89 @@
+/* notice */
+#notice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#notice .box{
+    background: #879860;
+    min-width: 1000px;
+    padding: 14px 14px 14px 56px;
+    margin: 20px 15px 15px 15px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* chart */
+#chart-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chart-nav .box{
+    width: 1000px;
+    margin-top: 2rem;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#chart-nav ul{
+    list-style: none;
+}
+
+#chart-nav ul li{
+    display: inline-block;
+    position: relative;
+}
+
+/* #chart-nav ul li ul{
+    display: none;
+} */
+
+.content-1{
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 1200px;
+}
+
+.content-2{
+    display: block;
+    position: absolute;
+    left: -200px;
+    width: 1200px;
+}
+
+.button{
+    border-radius: 5px;
+    border: 1px solid #999999;
+    background: #999999;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+}
+
+/* content */
+#notice-p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40rem;
+    margin-bottom: 3rem;
+}
+
+#notice-p .box{
+    max-width: 1200px;
+}
+
+#notice-p h2{
+    font-size: 20px;
+}
+
+#notice-p p{
+    font-size: 17px;
+}
