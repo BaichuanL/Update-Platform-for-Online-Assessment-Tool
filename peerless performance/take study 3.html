@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="css/img/cropped-MARK-GLOW-1-192x192.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/take study.css">
+    <title>Take The Study</title>
+    <script type="text/javascript" src="jquery-1.11.1-min.js"></script>
+    <script type="text/javascript">
+     $(function () {
+         var firstList=["happy", "grateful", "Hopeful", "Proud", "Passionate", "Angry", "Confused", "Disgusted", "Sad", "Fearful"];
+         var firstElements=$(".first");
+        $.each(firstList,function(index,obj){
+            var val= index<5 ? 0 :1;  
+            $(".first").append("<option value='"+val+"'>"+obj+"</option>")
+        });
+
+        var secondListForPostive=["I attribute this emotion to a clear Company Mission ", "I attribute this emotion to strong  Senior Leadership",
+                                  "I attribute this emotion to a positive Life Balance",
+                                  "I attribute this emotion to strong Management Support",
+                                  "I attribute this emotion to a solid Personal Connection",
+                                  "I attribute this emotion to having a clear Purpose",
+                                  "I attribute this emotion to having Value Alignment",
+                                  "I attribute this emotion to my overall Wellbeing",
+                                  "I attribute this emotion to having a positive Work Environment",
+                                  "I attribute this emotion to a other Influences"
+                                ] 
+        var secondListForNegative=["I attribute this emotion to the lack of a clear Company Mission",
+                                   "I attribute this emotion to the lack of strong Senior Leadership",
+                                   "I attribute this emotion to the lack of Life Balance",
+                                   "I attribute this emotion to the lack of  strong Management Support",
+                                   "I attribute this emotion to the lack of a solid Personal Connection",
+                                   "I attribute this emotion to the lack of having a clear Purpose",
+                                   "I attribute this emotion to the lack of having Value Alignment",
+                                   "I attribute this emotion to the lack of my overall Wellbeing",
+                                   "I attribute this emotion to the lack of having a positive Work Environment",
+                                   "I attribute this emotion to the lack of a other Influences",
+                                ]
+        var optimal=["I would feel happy if our company offered a flexible work schedule",
+                     "I would feel grateful if our company offered a flexible work schedule",
+                     "I would feel proud if our company offered a flexible work schedule",
+                     "I would feel hopeful if our company offered a flexible work schedule",
+                     "I would feel passionate if our company offered a flexible work schedule"
+                    ]
+                    var firstElements=$(".first");
+            firstElements.each(function(i, firstElement){
+                $(firstElement).change(function(){
+                    var val=$(firstElement).val();
+                    var firstid=$(firstElement).attr("id");
+                    var secondid="second"+ firstid.substring(5)
+                    $("#third"+firstid.substring(5)).hide()
+                    $("#os"+firstid.substring(5)).hide()
+                    if(val==1 ){
+                        $("#third"+firstid.substring(5)).empty()
+                        $("#third"+firstid.substring(5)).show()
+                        $("#os"+firstid.substring(5)).show()
+                        $.each(optimal,function(index,obj){
+                            $("#third"+firstid.substring(5)).append("<option value='"+val+"'>"+obj+"</option>")
+                        })
+                    }
+                    var secondList= (val==0)? secondListForPostive: secondListForNegative;
+                    $("#"+ secondid).empty();
+                    $.each(secondList,function(index,obj){
+                    $("#"+ secondid).append("<option value='"+val+"'>"+obj+"</option>")
+                    });
+                });
+            })
+        });
+</script>
+</head>
+<body>
+    <nav id="navbar" class="nav-shadow">
+        <h1 class="logo">
+            <img src="css/img/logo.png" alt="peerless" width="100px">
+        </h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="take study.html">Take&nbspThe&nbspStudy</a></li>
+            <li><a href="adashboard.html">Associate&nbspDashboard</a></li>
+            <li><a href="mdashboard.html">Management&nbspDashboard</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div id="showcase">
+        <h1>Take The Study</h1>
+    </div>
+    <div id="sidebar-l">
+        <div class="sidebar-dis1">
+            <a href="attributes.html" class="button-2" type="button">ATTRIBUTE DEFINITIONS</a>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div class="sidebar-dis1">
+            <a href="take study.html#question-1" class="a-question">Question 1</a>
+            <a href="take study.html#question-2" class="a-question">Question 2</a>
+            <a href="take study.html#question-3" class="a-question">Question 3</a>
+            <a href="take study.html#question-4" class="a-question">Question 4</a>
+            <a href="take study.html#question-5" class="a-question">Question 5</a>
+            <a href="take study.html#question-6" class="a-question">Question 6</a>
+            <a href="take study.html#question-7" class="a-question">Question 7</a>
+            <a href="take study.html#question-8" class="a-question">Question 8</a>
+            <a href="take study.html#question-9" class="a-question">Question 9</a>
+            <a href="take study 2.html#question-10" class="a-question">Question 10</a>
+            <a href="take study 2.html#question-11" class="a-question">Question 11</a>
+            <a href="take study 2.html#question-12" class="a-question">Question 12</a>
+            <a href="take study 2.html#question-13" class="a-question">Question 13</a>
+            <a href="take study 2.html#question-14" class="a-question">Question 14</a>
+            <a href="take study 2.html#question-15" class="a-question">Question 15</a>
+            <a href="take study 2.html#question-16" class="a-question">Question 16</a>
+            <a href="take study 2.html#question-17" class="a-question">Question 17</a>
+        </div>
+        <div class="sidebar-dis2">
+            <a href="take study 2.html#question-18" class="a-question">Question 18</a>
+            <a href="take study 3.html#question-19" class="a-question">Question 19</a>
+            <a href="take study 3.html#question-20" class="a-question">Question 20</a>
+            <a href="take study 3.html#question-21" class="a-question">Question 21</a>
+            <a href="take study 3.html#question-22" class="a-question">Question 22</a>
+            <a href="take study 3.html#question-23" class="a-question">Question 23</a>
+            <a href="take study 3.html#question-24" class="a-question">Question 24</a>
+            <a href="take study 3.html#question-25" class="a-question">Question 25</a>
+            <a href="take study 3.html#question-26" class="a-question">Question 26</a>
+            <a href="take study 3.html#question-27" class="a-question">Question 27</a>
+            <a href="take study 4.html#question-28" class="a-question">Question 28</a>
+            <a href="take study 4.html#question-29" class="a-question">Question 29</a>
+            <a href="take study 4.html#question-30" class="a-question">Question 30</a>
+            <a href="take study 4.html#question-31" class="a-question">Question 31</a>
+            <a href="take study 4.html#question-32" class="a-question">Question 32</a>
+            <a href="take study 4.html#question-33" class="a-question">Question 33</a>
+            <a href="take study 4.html#question-34" class="a-question">Question 34</a>
+        </div>
+    </div>
+    <!-- <script>
+        if (window.location.hash.indexOf('#') >= 0) {
+    $('html,body').animate({
+        scrollTop: ($(window.location.hash).offset().top - 50) + "px"
+    },
+    300);
+};
+    </script> -->
+    <section id="question">
+        <div>
+            <h2 id="question-19" class="q-title">QUESTION 19</h2>
+            <p>I feel that I understand and live by our company's core values</p>
+            <p>Choose an emotion and then an attribute statement that best supports Why you feel this way.</p>
+            <form name="frm">  
+                <select name="s1" class="first" id="first19">  
+                    <option>--Choose--</option>  
+                </select> 
+                <select name="s2" class="second" id="second19">
+                    <option value="Choose" selected>--Choose--</option>
+                </select><br><br>
+                <h2 class="os" id="os19">Optimal Statement</h2>
+                <select name="s3" class="third" id="third19">
+                    <option value="Choose" selected>--Choose--</option>
+                </select>
+            </form>
+             <h3 class="textfield">Why?</h3>
+             <textarea name="textfield3" cols="100" rows="10"></textarea><br>
+        </div> 
+    </section>
+    <section id="question">
+        <div>
+            <h2 id="question-20" class="q-title">QUESTION 20</h2>
+            <p>I feel our culture promotes life balance</p>
+            <p>Choose an emotion and then an attribute statement that best supports Why you feel this way.</p>
+            <form name="frm">  
+                <select name="s1" class="first" id="first20">  
+                    <option>--Choose--</option>  
+                </select> 
+                <select name="s2" class="second" id="second20">
+                    <option value="Choose" selected>--Choose--</option>
+                </select><br><br>
+                <h2 class="os" id="os20">Optimal Statement</h2>
+                <select name="s3" class="third" id="third20">
+                    <option value="Choose" selected>--Choose--</option>
+                </select>
+            </form>
+             <h3 class="textfield">Why?</h3>
+             <textarea name="textfield3" cols="100" rows="10"></textarea><br>
+        </div> 
+    </section>
+    <section id="question">
+        <div>
+            <h2 id="question-21" class="q-title">QUESTION 21</h2>
+            <p>I feel that I would recommend our company as an Employer of Choice</p>
+            <p>Choose an emotion and then an attribute statement that best supports Why you feel this way.</p>
+            <form name="frm">  
+                <select name="s1" class="first" id="first21">  
+                    <option>--Choose--</option>  
+                </select> 
+                <select name="s2" class="second" id="second21">
+                    <option value="Choose" selected>--Choose--</option>
+                </select><br><br>
+                <h2 class="os" id="os21">Optimal Statement</h2>
+                <select name="s3" class="third" id="third21">
+                    <option value="Choose" selected>--Choose--</option>
+                </select>
+            </form>
+             <h3 class="textfield">Why?</h3>
+             <textarea name="textfield3" cols="100" rows="10"></textarea><br>
+        </div> 
+    </section>
+    <section id="question">
+        <div>
+            <h2 id="question-22" class="q-title">QUESTION 22</h2>
+            <p>How do you feel about the current state of your company culture</p>
+            <p>Choose an emotion and then an attribute statement that best supports Why you feel this way.</p>
+            <form name="frm">  
+                <select name="s1" class="first" id="first22">  
+                    <option>--Choose--</option>  
+                </select> 
+                <select name="s2" class="second" id="second22">
+                    <option value="Choose" selected>--Choose--</option>
+                </select><br><br>
+                <h2 class="os" id="os22">Optimal Statement</h2>
+                <select name="s3" class="third" id="third22">
+                    <option value="Choose" selected>--Choose--</option>
+                </select>
+            </form>
+             <h3 class="textfield">Why?</h3>
+             <textarea name="textfield3" cols="100" rows="10"></textarea><br>
+        </div> 
+    </section>
+    <section id="question">
+        <div>
+            <h2 id="question-23" class="q-title">QUESTION 23</h2>
+            <p>I feel that my co-workers are trustworthy and transparent</p>
+            <p>Choose an emotion and then an attribute statement that best supports Why you feel this way.</p>
+            <form name="frm">  
+                <select name="s1" class="first" id="first23">  
+                    <option>--Choose--</option>  
+                </select> 
+                <select name="s2" class="second" id="second23">
+                    <option value="Choose" selected>--Choose--</option>
+                </select><br><br>
+                <h2 class="os" id="os23">Optimal Statement</h2>
+                <select name="s3" class="third" id="third23">
+                    <option value="Choose" selected>--Choose--</option>
+                </select>
+            </form>
+             <h3>Why?</h3>
+             <textarea name="textfield3" cols="100" rows="10"></textarea><br>
+        </div> 
+    </section>
+    <section id="question">
+        <div>
+            <h2 id="question-24" class="q-title">QUESTION 24</h2>
+            <p>I feel that my company encourages teamwork and collaboration.</p>
+            <p>Choose an emotion and then an attribute statement that best supports Why you feel this way.</p>
+            <form name="frm">  
+                <select name="s1" class="first" id="first24">  
+                    <option>--Choose--</option>  
+                </select> 
+                <select name="s2" class="second" id="second24">
+                    <option value="Choose" selected>--Choose--</option>
+                </select><br><br>
+                <h2 class="os" id="os24">Optimal Statement</h2>
+                <select name="s3" class="third" id="third24">
+                    <option value="Choose" selected>--Choose--</option>
+                </select>
+            </form>
+             <h3 class="textfield">Why?</h3>
+             <textarea name="textfield3" cols="100" rows="10"></textarea><br>
+        </div> 
+    </section>
+    <section id="question">
+        <div>
+            <h2 id="question-25" class="q-title">QUESTION 25</h2>
+            <p>I feel that my manager is trustworthy and transparent.</p>
+            <p>Choose an emotion and then an attribute statement that best supports Why you feel this way.</p>
+            <form name="frm">  
+                <select name="s1" class="first" id="first25">  
+                    <option>--Choose--</option>  
+                </select> 
+                <select name="s2" class="second" id="second25">
+                    <option value="Choose" selected>--Choose--</option>
+                </select><br><br>
+                <h2 class="os" id="os25">Optimal Statement</h2>
+                <select name="s3" class="third" id="third25">
+                    <option value="Choose" selected>--Choose--</option>
+                </select>
+            </form>
+             <h3 class="textfield">Why?</h3>
+             <textarea name="textfield3" cols="100" rows="10"></textarea><br>
+        </div> 
+    </section>
+    <section id="question">
+        <div>
+            <h2 id="question-26" class="q-title">QUESTION 26</h2>
+            <p>I feel that executive leadership is trustworthy and transparent</p>
+            <p>Choose an emotion and then an attribute statement that best supports Why you feel this way.</p>
+            <form name="frm">  
+                <select name="s1" class="first" id="first26">  
+                    <option>--Choose--</option>  
+                </select> 
+                <select name="s2" class="second" id="second26">
+                    <option value="Choose" selected>--Choose--</option>
+                </select><br><br>
+                <h2 class="os" id="os26">Optimal Statement</h2>
+                <select name="s3" class="third" id="third26">
+                    <option value="Choose" selected>--Choose--</option>
+                </select>
+            </form>
+             <h3 class="textfield">Why?</h3>
+             <textarea name="textfield3" cols="100" rows="10"></textarea><br>
+        </div> 
+    </section>
+    <section id="question">
+        <div>
+            <h2 id="question-27" class="q-title">QUESTION 27</h2>
+            <p>I feel that my department is sufficiently staffed to support the business needs. *</p>
+            <p>Choose an emotion and then an attribute statement that best supports Why you feel this way.</p>
+            <form name="frm">  
+                <select name="s1" class="first" id="first27">  
+                    <option>--Choose--</option>  
+                </select> 
+                <select name="s2" class="second" id="second27">
+                    <option value="Choose" selected>--Choose--</option>
+                </select><br><br>
+                <h2 class="os" id="os27">Optimal Statement</h2>
+                <select name="s3" class="third" id="third27">
+                    <option value="Choose" selected>--Choose--</option>
+                </select>
+            </form>
+             <h3 class="textfield">Why?</h3>
+             <textarea name="textfield3" cols="100" rows="10"></textarea><br>
+             <input type="button" value="Save"><br>
+        </div> 
+    </section>
+</body>
+<footer>
+    <div class="flip">
+        <div class="flip-flex">
+            <a href="take study.html" class="flip-number">1</a>
+            <a href="take study 2.html" class="flip-number">2</a>
+            <a href="take study 3.html" class="flip-number">3</a>
+            <a href="take study 4.html" class="flip-number">4</a>
+        </div>
+    </div>
+</footer>
+</html>
