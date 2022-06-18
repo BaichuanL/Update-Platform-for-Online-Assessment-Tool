@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="css/take study.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    .page-3 {
+        background: #378acd !important;
+    }
+    </style>
+    <%- include('../partials/takeStudySelect') %>
+  </head>
+  <body onload="onload()">
+    <%- include('../partials/loader') %>
+    <%- include('../partials/nav') %>
+    <div id="showcase">
+      <h1>About The Peerless Study</h1>
+    </div>
+    <section id="notice">
+      <div class="box">
+        <div>
+          <h2>Take The Peerless Study Now</h2>
+          <p>
+            Because of the sensitive nature of the questions asked and the
+            responses collected, The Peerless Study is anonymous and will not be
+            trackable back to the respondent. Only data points will be shared in
+            a dashboard format. All responses entered into The Peerless Study
+            remain the property of Peerless Performance and will not be shared.*
+            At the conclusion of The Study you will be able to view your
+            personal dashboard with your unique and private responses, the
+            results, where the disappointment gap lies and insights into how you
+            are thinking and feeling about the current and future state both
+            personally and professionally. There are tips and suggestions
+            offered to empower you to find resolutions that may be helpful with
+            certain emotions and situations.
+          </p>
+          <p>
+            *Please Note: If information is shared that demonstrates potential
+            harm to yourself, harm to others or the destruction of property, you
+            and the appropriate officials will be notified to gain assistance.
+          </p>
+          <a href="/attributes" class="button-1" type="button"
+            >ATTRIBUTE DEFINITIONS</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <%- include('../partials/qstnSidebar') %>
+    <!-- <script>
+        if (window.location.hash.indexOf('#') >= 0) {
+    $('html,body').animate({
+        scrollTop: ($(window.location.hash).offset().top - 50) + "px"
+    },
+    300);
+};
+    </script> -->
+      <section id="question">
+        <div>
+          <h2 id="question-19" class="q-title">QUESTION 19</h2>
+          <p id="question-1-title">
+            I feel that my job performance is important to the success of our
+            company
+          </p>
+          <p>
+            Choose an emotion and then an attribute statement that best supports
+            Why you feel this way.
+          </p>
+          <form name="frm" id="question-form-1">
+            <%- include('../partials/qstnForm', {qstnNo: 1}); %>
+          </form>
+        </div>
+      </section>
+      <section id="question">
+        <div>
+          <h2 id="question-20" class="q-title">QUESTION 20</h2>
+          <p id="question-2-title">
+            I feel that my job performance is important to the success of our
+            company
+          </p>
+          <p>
+            Choose an emotion and then an attribute statement that best supports
+            Why you feel this way.
+          </p>
+          <form name="frm" id="question-form-2">
+            <%- include('../partials/qstnForm', {qstnNo: 2}); %>
+          </form>
+          </form>
+        </div>
+      </section>
+      <section id="question">
+        <div>
+          <h2 id="question-21" class="q-title">QUESTION 21</h2>
+          <p id="question-3-title">
+            I feel that my job performance is important to the success of our
+            company
+          </p>
+          <p>
+            Choose an emotion and then an attribute statement that best supports
+            Why you feel this way.
+          </p>
+          <form name="frm" id="question-form-3">
+            <%- include('../partials/qstnForm', {qstnNo: 3}); %>
+          </form>
+        </div>
+      </section>
+      <section id="question">
+        <div>
+          <h2 id="question-22" class="q-title">QUESTION 22</h2>
+          <p id="question-4-title">
+            I feel that my job performance is important to the success of our
+            company
+          </p>
+          <p>
+            Choose an emotion and then an attribute statement that best supports
+            Why you feel this way.
+          </p>
+          <form name="frm" id="question-form-4">
+            <%- include('../partials/qstnForm', {qstnNo: 4}); %>
+          </form>
+        </div>
+      </section>
+      <section id="question">
+        <div>
+          <h2 id="question-23" class="q-title">QUESTION 23</h2>
+          <p id="question-5-title">
+            I feel that I have the tools and technology to carry our my
+            responsibilities efficiently and productively.
+          </p>
+          <p>
+            Choose an emotion and then an attribute statement that best supports
+            Why you feel this way.
+          </p>
+          <form name="frm" id="question-form-5">
+            <%- include('../partials/qstnForm', {qstnNo: 5}); %>
+          </form>
+        </div>
+      </section>
+      <section id="question">
+        <div>
+          <h2 id="question-24" class="q-title">QUESTION 24</h2>
+          <p id="question-6-title">
+            I feel that I have the tools and technology to carry our my
+            responsibilities efficiently and productively.
+          </p>
+          <p>
+            Choose an emotion and then an attribute statement that best supports
+            Why you feel this way.
+          </p>
+          <form name="frm" id="question-form-6">
+            <%- include('../partials/qstnForm', {qstnNo: 6}); %>
+          </form>
+        </div>
+      </section>
+      <section id="question">
+        <div>
+          <h2 id="question-25" class="q-title">QUESTION 25</h2>
+          <p id="question-7-title">I feel that I serve as a role model within my company. *</p>
+          <p>
+            Choose an emotion and then an attribute statement that best supports
+            Why you feel this way.
+          </p>
+          <form name="frm" id="question-form-7">
+            <%- include('../partials/qstnForm', {qstnNo: 7}); %>
+          </form>
+        </div>
+      </section>
+      <section id="question">
+        <div>
+          <h2 id="question-26" class="q-title">QUESTION 26</h2>
+          <p id="question-8-title">I feel that my company offers a flexible work schedule. *</p>
+          <p>
+            Choose an emotion and then an attribute statement that best supports
+            Why you feel this way.
+          </p>
+          <form name="frm" id="question-form-8">
+            <%- include('../partials/qstnForm', {qstnNo: 8}); %>
+          </form>
+        </div>
+      </section>
+      <section id="question">
+        <div>
+          <h2 id="question-27" class="q-title">QUESTION 27</h2>
+          <p id="question-9-title">
+            I feel that my company understands when I have personal commitments
+            outside of our organization. *
+          </p>
+          <p>
+            Choose an emotion and then an attribute statement that best supports
+            Why you feel this way.
+          </p>
+          <form name="frm" id="question-form-9">
+            <%- include('../partials/qstnForm', {qstnNo: 9}); %>
+          </form>
+          <input class="save-btn" onclick="onSubmit()" type="button" value="Save" /><br />
+        </div>
+      </section>
+  </body>
+  <footer><%- include('../partials/takestudyFooter') %></footer>
+  <script>
+    Storage.prototype.setObj = function (key, obj) {
+      return this.setItem(key, JSON.stringify(obj));
+    };
+    Storage.prototype.getObj = function (key) {
+      return JSON.parse(this.getItem(key));
+    };
+  </script>
+  <script>
+    function onload() {
+      showLoader();
+      const questionData = localStorage.getObj("page_3");
+      if (questionData) {
+        var forms = document.querySelectorAll("form");
+        for (i = 0; i < forms.length; i++) {
+          for (j = 0; j < forms[i].elements.length; j++) {
+            forms[i].elements[j].value =
+              questionData[i][forms[i].elements[j].name];
+            forms[i].elements[j].dispatchEvent(new Event("change"));
+          }
+        }
+      }
+      hideLoader();
+    }
+    function onSubmit() {
+      var questionnaire = [];
+      var forms = document.querySelectorAll("form");
+      // Iterate over the form controls
+      for (i = 0; i < forms.length; i++) {
+        const qstn = {question: document.getElementById(`question-${i + 1}-title`).innerText};
+        for (j = 0; j < forms[i].elements.length; j++) {
+          // console.log("questtion", document.querySelector("#question-title-").innerText);
+          qstn[forms[i].elements[j].name] = forms[i].elements[j].value;
+        }
+        questionnaire.push(qstn);
+      }
+      localStorage.setObj("page_3", questionnaire);
+      location.href = "/takeStudy_4"
+    }
+  </script>
+</html>

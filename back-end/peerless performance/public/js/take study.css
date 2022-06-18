@@ -1,0 +1,117 @@
+/* notice */
+#notice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#notice .box{
+    background: #879860;
+    width: 800px;
+    height: 370px;
+    padding: 14px 14px 14px 56px;
+    margin: 20px 15px 15px 15px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.button-1{
+    border-radius: 10px;
+    border: 1px solid #999999;
+    font-size: 14px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+    background: white;
+    color: #999999;
+    font-weight: 500;
+}
+
+/* sidebar */
+#sidebar{
+    width: 250px;
+    height: 390px;
+    position: fixed;
+    right: 1%;
+    top: 38%;
+    bottom: 100px;
+    display: flex;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    background: rgb(0 0 0 / 5%);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+.sidebar-dis1{
+    flex: 50%;
+    margin-left: 1rem;
+}
+
+.sidebar-dis2{
+    flex: 50%;
+    margin-left: 1rem;
+}
+
+.a-question:link{
+    color: #999999;
+}
+
+.a-question:visited{
+    color:#999999;
+}
+
+.a-question:hover{
+    color: #000000;
+}
+
+.a-question:active{
+    color:#999999; 
+}
+
+/* questions */
+#question{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.q-title{
+    color: #337AB7;
+}
+
+.textfield{
+    margin-top: 1rem;
+}
+
+/* flip page */
+.flip{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.flip-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-number{
+    border: 1px solid #999999;
+    border-radius: 5px;
+    background: #999999;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    margin: 0rem 0.5rem 2rem 0.5rem;
+}
+.os{
+    display: none;
+    font-size: 17px;
+    font-weight: 500;
+}
+.third{
+    display: none;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="css/adashboard.css">
+    <link rel="icon" type="image/x-icon" href="css/img/cropped-MARK-GLOW-1-192x192.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/adashboard.css">
+</head>
+<body class="overflow-x-hidden" onload="onLoad()">
+    <%- include('../partials/nav') %>
+    <div id="showcase">
+        <h1>Associate Dashboard</h1>
+    </div>
+    <section id="notice">
+        <div class="box">
+            <div>
+                <h2>The following charts show:</h2>
+                <p>1. The color wheel on the top shows how you feel today about key organizational attributes. The  color wheel on the bottom shows how you would like to feel.</p>
+                <p>2. Click on any attribute on the top color wheel to view tips and suggestions offered to impower you to find resolutions that may be helpful with certain emotions and situations.</p>
+            </div>
+        </div>
+    </section>
+    <section id="chart-nav">
+        <div class="box">
+            <div class="d-flex"><button class="button associate-btn selected-btn" onclick="toggleGraph()">Current Emotional State</button>
+                <button class="button optimal-btn" onclick="toggleOptimalGraph()">Optimal Emotional State</button></div>
+            <div class="graph-container">
+                    <div class="content-1">
+                         <li class="w-100"><%- include('./chart') %></li>
+                    </div>
+                     <div class="content-2 visibility-none">
+                         <li class="w-100"><%- include('./chart2') %></li>
+                     </div>
+             </div>
+        </div>
+    </section>
+    <section id="notice-p">
+        <div class="box">
+            <h2>Because of the sensitive nature of the questions asked and the responses collected, The Peerless Study is anonymous and will not be trackable back to the respondent.  Only data points will be shared in a dashboard format. All responses entered into The Peerless Study remain the property of Peerless Performance and will not be shared.*  At the conclusion of The Study you will be able to view your personal dashboard with your unique and private responses, the results, where the disappointment gap lies and insights into how you are thinking and feeling about the current and future state both personally and professionally.  There are tips and suggestions offered to impower you to find resolutions that may be helpful with certain emotions and situations.</h2>
+            <p>*Please Note: If information is shared that demonstrates potential harm to yourself, harm to others or the destruction of property, you and the appropriate officials will be notified to gain assistance.</p>
+        </div>
+    </section>
+    <script>
+        function onLoad() {
+            var optimalChart = document.querySelector(".content-2");
+            optimalChart.classList.add('d-none');
+            optimalChart.classList.remove('visibility-none')
+        }
+        function toggleGraph() {
+            var associateChart = document.querySelector(".content-1");
+            var optimalChart = document.querySelector(".content-2");
+            var associateBtn = document.querySelector(".associate-btn");
+            var optimalBtn = document.querySelector(".optimal-btn");
+            optimalChart.classList.add('d-none');
+            associateChart.classList.remove('d-none');
+            associateBtn.classList.add('selected-btn');
+            optimalBtn.classList.remove('selected-btn');
+        }
+        function toggleOptimalGraph() {
+            var associateChart = document.querySelector(".content-1");
+            var optimalChart = document.querySelector(".content-2");
+            var associateBtn = document.querySelector(".associate-btn");
+            var optimalBtn = document.querySelector(".optimal-btn");
+            associateChart.classList.add('d-none');
+            optimalChart.classList.remove('d-none');
+            associateBtn.classList.remove('selected-btn');
+            optimalBtn.classList.add('selected-btn');
+        }
+    </script>
+</body>
+</html>

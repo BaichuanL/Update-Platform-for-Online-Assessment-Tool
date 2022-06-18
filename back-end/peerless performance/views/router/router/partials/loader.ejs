@@ -1,0 +1,15 @@
+<div class="loader-overlay d-none">
+    <div class="loader-overlay__inner">
+        <div class="loader-overlay__content"><span class="spinner"></span></div>
+    </div>
+</div>
+<script>
+showLoader = function() {
+    loader = document.querySelector(".loader-overlay");
+    loader.classList.remove('d-none');
+}
+hideLoader = function() {
+    loader = document.querySelector(".loader-overlay");
+    loader.classList.add('d-none');
+}
+</script>

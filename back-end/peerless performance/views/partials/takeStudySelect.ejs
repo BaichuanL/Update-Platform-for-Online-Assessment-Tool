@@ -1,0 +1,92 @@
+
+<script type="text/javascript">
+    $(function () {
+      var firstList = [
+        "Happy",
+        "Grateful",
+        "Hopeful",
+        "Proud",
+        "Passionate",
+        "Angry",
+        "Confused",
+        "Disgusted",
+        "Sad",
+        "Fearful",
+      ];
+      var negetiveList = ["Angry",
+        "Confused",
+        "Disgusted",
+        "Sad",
+        "Fearful"]
+      var firstElements = $(".first");
+      $.each(firstList, function (index, obj) {
+        var val = index < 5 ? 0 : 1;
+        $(".first").append(
+          "<option value='" + obj + "'>" + obj + "</option>"
+        );
+      });
+
+      var secondListForPostive = [
+        {label: "I attribute this emotion to a clear Company Mission ", value: "Company Mission"},
+        {label: "I attribute this emotion to strong  Senior Leadership",  value: "Senior Leadership"},
+        {label: "I attribute this emotion to a positive Life Balance", value: "Life Balance"},
+        {label: "I attribute this emotion to strong Management Support", value: "Management Support"},
+        {label: "I attribute this emotion to a solid Personal Connection", value: "Personal Connection"},
+        {label: "I attribute this emotion to having a clear Purpose", value: "Purpose"},
+        {label: "I attribute this emotion to having Value Alignment", value: "Value Alignment"},
+        {label: "I attribute this emotion to my overall Wellbeing", value: "Wellbeing"},
+        {label: "I attribute this emotion to having a positive Work Environment", value: "Work Environment"},
+        {label: "I attribute this emotion to a other Influences", value: "Influences"}
+      ];
+      var secondListForNegative = [
+        {label: "I attribute this emotion to the lack of a clear Company Mission", value: "Company Mission"},
+        {label: "I attribute this emotion to the lack of strong Senior Leadership",  value: "Senior Leadership"},
+        {label: "I attribute this emotion to the lack of Life Balance", value: "Life Balance"},
+        {label: "I attribute this emotion to the lack of  strong Management Support", value: "Management Support"},
+        {label: "I attribute this emotion to the lack of a solid Personal Connection", value: "Personal Connection"},
+        {label: "I attribute this emotion to the lack of having a clear Purpose", value: "Purpose"},
+        {label: "I attribute this emotion to the lack of having Value Alignment", value: "Value Alignment"},
+        {label: "I attribute this emotion to the lack of my overall Wellbeing", value: "Wellbeing"},
+        {label: "I attribute this emotion to the lack of having a positive Work Environment", value: "Work Environment"},
+        {label: "I attribute this emotion to the lack of a other Influences", value: "Influences"}
+      ];
+      var optimal = [
+        {label:"I would feel happy if our company offered a flexible work schedule", value: "happy"},
+        {label:"I would feel grateful if our company offered a flexible work schedule", value: "grateful"},
+        {label:"I would feel proud if our company offered a flexible work schedule", value: "proud"},
+        {label:"I would feel hopeful if our company offered a flexible work schedule", value: "hopeful"},
+        {label:"I would feel passionate if our company offered a flexible work schedule", value: "passionate"}
+      ];
+      var firstElements = $(".first");
+      firstElements.each(function (i, firstElement) {
+        $(firstElement).change(function () {
+          var val = $(firstElement).val();
+          val = negetiveList.includes(val)? 1 : 0;
+          var firstid = $(firstElement).attr("id");
+          var secondid = "second" + firstid.substring(5);
+          $("#optimal-select" + firstid.substring(5)).hide();
+          $("#third" + firstid.substring(5)).hide();
+          $("#os" + firstid.substring(5)).hide();
+          if (val == 1) {
+            $("#optimal-select"+ firstid.substring(5)).show();
+            $("#third" + firstid.substring(5)).empty();
+            $("#third" + firstid.substring(5)).show();
+            $("#os" + firstid.substring(5)).show();
+            $.each(optimal, function (index, obj) {
+              $("#third" + firstid.substring(5)).append(
+                "<option value='" + obj.value + "'>" + obj.label + "</option>"
+              );
+            });
+          }
+          var secondList =
+            val == 0 ? secondListForPostive : secondListForNegative;
+          $("#" + secondid).empty();
+          $.each(secondList, function (index, obj) {
+            $("#" + secondid).append(
+              "<option value='" + obj.value + "'>" + obj.label + "</option>"
+            );
+          });
+        });
+      });
+    });
+  </script>

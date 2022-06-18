@@ -1,0 +1,105 @@
+<div>
+  <div id="my_dataviz"></div>
+  <div class="chartCard">
+    <div class="chartBox">
+      <canvas width="100%" id="mAssociateChart"></canvas>
+    </div>
+  </div>
+  <script>
+    const colorConfig = {
+      fearful: { backgroundColor: "rgba(55, 86, 35, 0.2)", borderColor: "rgba(55, 86, 35, 1)" },
+      sad: { backgroundColor: "rgba(128, 96, 0, 0.2)", borderColor: "rgba(128, 96, 0, 1)" },
+      angry: {
+        backgroundColor: "rgba(255, 0, 0, 0.2)",
+        borderColor: "rgba(255, 0, 0, 1)",
+      },
+      disgusted: {
+        backgroundColor: "rgba(112, 48, 160, 0.2)",
+        borderColor: "rgba(112, 48, 160, 1)",
+      },
+      confused: {
+        backgroundColor: "rgba(153, 153, 255, 0.2)",
+        borderColor: "rgba(153, 153, 255, 1)",
+      },
+      passionate: {
+        backgroundColor: "rgba(255, 51, 153, 0.2)",
+        borderColor: "rgba(255, 51, 153, 1)",
+      },
+      proud: {
+        backgroundColor: "rgba(255, 153, 153, 0.2)",
+        borderColor: "rgba(255, 153, 153, 1)",
+      },
+      hopeful: {
+        backgroundColor: "rgba(253, 146, 3, 0.2)",
+        borderColor: "rgba(253, 146, 3, 1)",
+      },
+      grateful: { backgroundColor: "rgba(146, 208, 80, 0.2)", borderColor: "rgba(146, 208, 80, 1)" },
+      happy: { backgroundColor: "rgba(255, 255, 0, 0.2)", borderColor: "rgba(255, 255, 0, 1)" },
+      other: { backgroundColor: "rgba(0, 176, 240, 0.2)", borderColor: "rgba(0, 176, 240, 1)" },
+    };
+    const fearful = JSON.parse(`<%= fearful  %>`);
+    const sad = JSON.parse(`<%= sad  %>`);
+    const angry = JSON.parse(`<%= angry  %>`);
+    const disgusted = JSON.parse(`<%= disgusted  %>`);
+    const confused = JSON.parse(`<%= confused  %>`);
+    const passionate = JSON.parse(`<%= passionate  %>`);
+    const proud = JSON.parse(`<%= proud  %>`);
+    const hopeful = JSON.parse(`<%= hopeful  %>`);
+    const grateful = JSON.parse(`<%= grateful  %>`);
+    const happy = JSON.parse(`<%= happy  %>`);
+    const other = JSON.parse(`<%= other  %>`);
+    const gData = {
+      fearful,
+      sad,
+      angry,
+      disgusted,
+      confused,
+      passionate,
+      proud,
+      hopeful,
+      grateful,
+      happy,
+      other,
+    };
+    // setup
+    const data = {
+      labels: [
+        "Company Mission",
+        "Senior Leadership",
+        "Life Balance",
+        "Management Support",
+        "Personal Connection",
+        "Purpose",
+        "Value Alignment",
+        "Wellbeing",
+        "Work Environment",
+        "Influences",
+      ],
+      datasets: Object.entries(gData).map(([key, value]) => ({
+        label: key,
+        data: value,
+        ...colorConfig[key],
+        borderWidth: 1,
+      })),
+    };
+
+    // config
+    const config = {
+      type: "bar",
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    };
+
+    // render init block
+    const mAssociateChart = new Chart(
+      document.getElementById("mAssociateChart"),
+      config
+    );
+  </script>
+</div>
